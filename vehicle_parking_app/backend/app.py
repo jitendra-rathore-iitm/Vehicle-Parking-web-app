@@ -38,7 +38,7 @@ def create_admin():
         user = User(
             username = "admin",
             email = "admin@gmail.com",
-            password_hash = generate_password_hash("admin"),
+            password_hash = generate_password_hash("admin_90"),
             full_name = "Admin",
             address = "Rajathan",
             pincode = "306401",
