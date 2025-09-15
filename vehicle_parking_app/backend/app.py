@@ -16,7 +16,7 @@ app = None
 
 def create_app():
     app = Flask(__name__)
-    CORS(app, origins=["https://vehicle-parking-web-app-sy9k.vercel.app/"], supports_credentials=True)
+    CORS(app, origins=["https://vehicle-parking-web-app-sy9k.vercel.app"], supports_credentials=True)
     app.config.from_object(LocalDevelopmentConfig)
     db.init_app(app)
     jwt.init_app(app)
