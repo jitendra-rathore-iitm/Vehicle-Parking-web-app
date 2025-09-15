@@ -2,7 +2,7 @@ import axios from 'axios'
 import router from '../router/index.js'
 
 const api = axios.create({
-    baseURL: "http://localhost:5000",
+    baseURL: "https://vehicle-parking-web-app-1.onrender.com/",
 })
 
 api.interceptors.request.use((config) => {
