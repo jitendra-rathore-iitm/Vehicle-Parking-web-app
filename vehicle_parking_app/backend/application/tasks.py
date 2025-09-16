@@ -10,7 +10,7 @@ from .models import User,ReserveParkingSpot
 @shared_task(ignore_results = False, name = "generate_msg")
 def generate_msg(username):
     text = f"Hi {username}, your quick park has been generated. Please check the app at http://127.0.0.1:5173"
-    response = requests.post("https://chat.googleapis.com/v1/spaces/AAQARFU8F9s/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=3Cvx74gYrQCWECl5qJgVyRBrkZNBTaH5BCwnyazQG8w", json = {"text": text})
+    response = requests.post("api_key", json = {"text": text})
     print(response.status_code)
     return "The delivery is sent to user"
 
